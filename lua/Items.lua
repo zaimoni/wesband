@@ -136,10 +136,11 @@ function adjustWeaponDescription(wt)
 	wt.special = st1
 	return wt
 end
-wesnoth.register_wml_action("adjust_weapon_description", function(args)
+
+function wesnoth.wml_actions.adjust_weapon_description(args)
 	local var = string.match(args.variable, "[^%s]+") or H.wml_error("[adjust_weapon_description] requires a variable= key")
 	wesnoth.set_variable(var, adjustWeaponDescription(wesnoth.get_variable(var)))
-end)
+end
 
 function adjustArmorDescription(at)
 	at.special = ""
@@ -159,10 +160,11 @@ function adjustArmorDescription(at)
 	end
 	return at
 end
-wesnoth.register_wml_action("adjust_armor_description", function(args)
+
+function wesnoth.wml_actions.adjust_armor_description(args)
 	local var = string.match(args.variable, "[^%s]+") or H.wml_error("[adjust_weapon_description] requires a variable= key")
 	wesnoth.set_variable(var, adjustArmorDescription(wesnoth.get_variable(var)))
-end)
+end
 
 function createWeapon(wtype, rank, attr, var)
 	if attr == "random" then
@@ -1098,14 +1100,15 @@ function createWeapon(wtype, rank, attr, var)
 	end
 	wesnoth.set_variable(var, finalAdjust(weapon))
 end
-wesnoth.register_wml_action("create_weapon", function(args)
+
+function wesnoth.wml_actions.create_weapon(args)
 	local wtype = string.match(args.type, "[^%s]+") or H.wml_error("[create_weapon] requires a type= key")
 	local rank = args.rank or 0
 	local attr = string.match(args.attribute or "none", "[^%s]+")
 	local var = string.match(args.variable, "[^%s]+") or H.wml_error("[create_weapon] requires a variable= key")
 
 	createWeapon(wtype, rank, attr, var)
-end)
+end
 
 local function createArmor(atype, rank, attr, var)
 	if attr == "random" then
@@ -1686,14 +1689,15 @@ local function createArmor(atype, rank, attr, var)
 	end
 	wesnoth.set_variable(var, finalAdjust(armor))
 end
-wesnoth.register_wml_action("create_armor", function(args)
+
+function wesnoth.wml_actions.create_armor(args)
 	local atype = string.match(args.type, "[^%s]+") or H.wml_error("[create_armor] requires a type= key")
 	local rank = args.rank or 0
 	local attr = string.match(args.attribute or "none", "[^%s]+")
 	local var = string.match(args.variable, "[^%s]+") or H.wml_error("[create_armor] requires a variable= key")
 
 	createArmor(atype, rank, attr, var)
-end)
+end
 
 function wesnoth.wml_actions.drop_item(cfg)
 	local x = cfg.x or H.wml_error("[drop_item] requires an x= key")
