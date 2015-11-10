@@ -988,8 +988,7 @@ function construct_unit(var, unstore)
 			max_value = 25,
 			cumulative = "no",
 			name = "illuminates",
-			description = "Illuminates:\
-This unit illuminates the surrounding area, making lawful units fight better, and chaotic units fight worse.\
+			description = "This unit illuminates the surrounding area, making lawful units fight better, and chaotic units fight worse.\
 \
 Any units adjacent to this unit will fight as if it were dusk when it is night, and as if it were day when it is dusk.",
 			affect_self = "yes"
@@ -1004,8 +1003,7 @@ Any units adjacent to this unit will fight as if it were dusk when it is night, 
 				max_value = 50,
 				apply_to = "fire",
 				name = "cold aura",
-				description = "Cold Aura:\
-Adjacent units receive a 50% bonus to fire resistance and a -25% bonus to cold resistance. All cold spells are very powerful here.",
+				description = "Adjacent units receive a 50% bonus to fire resistance and a -25% bonus to cold resistance. All cold spells are very powerful here.",
 				affect_self = "yes",
 				affect_allies = "yes",
 				affect_enemies = "yes",
@@ -1032,7 +1030,7 @@ Adjacent units receive a 50% bonus to fire resistance and a -25% bonus to cold r
 				value = -25,
 				cumulative = "no",
 				name = "dark aura",
-				description = "Dark aura makes all enemy units fight worse (-25% for attack).",
+				description = "Makes all adjacent enemy units fight worse (-25% for attack).",
 				affect_self = "no",
 				affect_allies = "no",
 				affect_enemies = "yes",
@@ -1048,8 +1046,7 @@ Adjacent units receive a 50% bonus to fire resistance and a -25% bonus to cold r
 				max_value = 99,
 				apply_to = "fire,cold,arcane",
 				name = "deadzone",
-				description = "Deadzone:\
-Adjacent friendly units receive a 99% bonus to fire,cold and arcane resistance",
+				description = "Adjacent friendly units receive a 99% bonus to fire,cold and arcane resistance",
 				affect_self = "yes",
 				affect_allies = "yes",
 				{ "affect_adjacent", {
@@ -1061,8 +1058,7 @@ Adjacent friendly units receive a 99% bonus to fire,cold and arcane resistance",
 				value = 8,
 				name = "regenerates",
 				female_name = "female^regenerates",
-				description = "Regenerates:\
-The unit will heal itself 8 HP per turn. If it is poisoned, it will remove the poison instead of healing.",
+				description = "The unit will heal itself 8 HP per turn. If it is poisoned, it will remove the poison instead of healing.",
 				affect_self = "yes",
 				poison = "cured"
 			} })
@@ -1075,11 +1071,7 @@ The unit will heal itself 8 HP per turn. If it is poisoned, it will remove the p
 				id = "regenerates",
 				value = 6,
 				name = "water",
-				description = "Made of Water:\
-This unit is made of water. As a result, if it is standing in water, it will receive 6 hp. If it is poisoned, it will remove it instead of healing.",
-				name_inactive = "water",
-				description_inactive = "Made of Water:\
-This unit is made of water. As a result, if it is standing in water, it will receive 6 hp. If it is poisoned, it will remove it instead of healing.",
+				description = "This unit is made of water. As a result, if it is standing in water, it will receive 6 hp. If it is poisoned, it will remove it instead of healing.",
 				affect_self = "yes",
 				poison = "cured",
 				{ "filter_self", {
@@ -1093,11 +1085,7 @@ This unit is made of water. As a result, if it is standing in water, it will rec
 				id = "regenerates",
 				value = 6,
 				name = "rock",
-				description = "Made of Rock:\
-This unit is made of rock. If it stands in loose rock, it will recive 6 hp. If it is poisoned, it will remove it instead of healing.",
-				name_inactive = "rock",
-				description_inactive = "Made of Rock:\
-This unit is made of rock. If it stands in loose rock, it will recive 6 hp. If it is poisoned, it will remove it instead of healing.",
+				description = "This unit is made of rock. If it stands in loose rock, it will recive 6 hp. If it is poisoned, it will remove it instead of healing.",
 				affect_self = "yes",
 				poison = "cured",
 				{ "filter_self", {
@@ -1111,11 +1099,8 @@ This unit is made of rock. If it stands in loose rock, it will recive 6 hp. If i
 				id = "regenerates",
 				value = 6,
 				name = "fire",
-				description = "Made of Fire:\
-This unit is made of fire. If it stands in lava, it will recive 6 hp. If it is poisoned, it will remove it instead of healing.",
+				description = "This unit is made of fire. If it stands in lava, it will recive 6 hp. If it is poisoned, it will remove it instead of healing.",
 				name_inactive = "fire",
-				description_inactive = "Made of Fire:\
-This unit is made of fire. If it stands in lava, it will recive 6 hp. If it is poisoned, it will remove it instead of healing.",
 				affect_self = "yes",
 				poison = "cured",
 				{ "filter_self", {
@@ -1131,7 +1116,7 @@ This unit is made of fire. If it stands in lava, it will recive 6 hp. If it is p
 				id = "divine_health",
 				value = 3,
 				name = "divine health",
-				description = "Divine Health: Due to this unit's relationship with its deity it is granted a magical body in which the magic is manifested as the ability to self heal. Thus this unit will be healed by 3 HP per turn, poison will not be prolonged or cured...",
+				description = "Due to this unit's relationship with its deity it is granted a magical body in which the magic is manifested as the ability to self heal. Thus this unit will be healed by 3 HP per turn, poison will not be prolonged or cured...",
 				affect_self = "yes",
 			} })
 		elseif divine_health == 2 then
@@ -1139,7 +1124,7 @@ This unit is made of fire. If it stands in lava, it will recive 6 hp. If it is p
 				id = "divine_health_enahanced",
 				value = 6,
 				name = "divine health en",
-				description = "Divine Health: Due to this unit's relationship with its deity it is granted a magical body in which the magic is manifested as the ability to self heal. Thus this unit will be healed by 3 HP per turn, poison will not be prolonged or cured...",
+				description = "Due to this unit's relationship with its deity it is granted a magical body in which the magic is manifested as the ability to self heal. Thus this unit will be healed by 3 HP per turn, poison will not be prolonged or cured...",
 				affect_self = "yes",
 			} })
 		end
@@ -1148,8 +1133,7 @@ This unit is made of fire. If it stands in lava, it will recive 6 hp. If it is p
 				id = "wbd_feeding",
 				name = "feeding",
 				female_name= "female^feeding",
-				description="Feeding:\
-This unit gains 1 hitpoint added to its maximum whenever it kills a living unit."
+				description="This unit gains 1 hitpoint added to its maximum whenever it kills a living unit."
 			} })
 		end
 		local spell_power = get_p(unit, "variables.abilities.magic_casting.power") or 0
@@ -1174,8 +1158,7 @@ This unit gains 1 hitpoint added to its maximum whenever it kills a living unit.
 				table.insert(abilities, { "heals", {
 					id = "curing",
 					name = "cures",
-					description = "Cures:\
-A curer can cure a unit of poison, although that unit will receive no additional healing on the turn it is cured of the poison.",
+					description = "A curer can cure a unit of poison, although that unit will receive no additional healing on the turn it is cured of the poison.",
 					poison = "cured",
 					affect_allies = "yes",
 					affect_self = "yes",
@@ -1188,8 +1171,7 @@ A curer can cure a unit of poison, although that unit will receive no additional
 				id = "healing",
 				value = spell_power,
 				name = string.format("heals +%d", spell_power),
-				description = string.format("Heals +%d:\
-Allows the unit to heal adjacent allied units at the beginning of our turn.\
+				description = string.format("Allows the unit to heal adjacent allied units at the beginning of our turn.\
 \
 A unit cared for by this healer may heal up to %d HP per turn, or stop poison from taking effect for that turn.", spell_power, spell_power),
 				poison = "slowed",
@@ -1217,13 +1199,11 @@ A unit cared for by this healer may heal up to %d HP per turn, or stop poison fr
 		if player then
 			new_ability.max_value = 30 + 10 * skill_level
 			new_ability[1][2].less_than_equal_to = new_ability.max_value
-			new_ability.description = string.format("Steadfast Level %d:\
-This unit's resistances are doubled, up to a maximum of %d%%, when defending. Vulnerabilities are not affected.", skill_level, new_ability.max_value)
+			new_ability.description = string.format("This unit's resistances are doubled, up to a maximum of %d%%, when defending. Vulnerabilities are not affected.", skill_level, new_ability.max_value)
 		else
 			new_ability.max_value = 50
 			new_ability[1][2].less_than_equal_to = 50
-			new_ability.description = "Steadfast:\
-This unit's resistances are doubled, up to a maximum of 50%, when defending. Vulnerabilities are not affected."
+			new_ability.description = "This unit's resistances are doubled, up to a maximum of 50%, when defending. Vulnerabilities are not affected."
 		end
 		table.insert(abilities, { "resistance", new_ability })
 	end
@@ -1243,8 +1223,7 @@ This unit's resistances are doubled, up to a maximum of 50%, when defending. Vul
 			affect_self = "no",
 			affect_allies = "yes",
 			cumulative = "no",
-			description = string.format("Leadership Level %d:\
-This unit can lead friendly units that are next to it, making them fight better.\
+			description = string.format("This unit can lead friendly units that are next to it, making them fight better.\
 \
 Adjacent friendly units of lower level will do more damage in battle. When a unit adjacent to, of a lower level than, and on the same side as a unit with Leadership engages in combat, its attacks do 30%% more damage times the difference in their levels if chaotic, 20%% if non-chaotic.", skill_level),
 			value = 30 * skill_level,
@@ -1292,8 +1271,7 @@ Adjacent friendly units of lower level will do more damage in battle. When a uni
 			affect_self = "no",
 			affect_allies = "yes",
 			cumulative = "no",
-			description = string.format("Leadership Level %d:\
-This unit can lead friendly units that are next to it, making them fight better.\
+			description = string.format("This unit can lead friendly units that are next to it, making them fight better.\
 \
 Adjacent friendly units of lower level will do more damage in battle. When a unit adjacent to, of a lower level than, and on the same side as a unit with Leadership engages in combat, its attacks do 25%% more damage times the difference in their levels.", skill_level),
 			value = 25 * skill_level,
@@ -1327,8 +1305,7 @@ Adjacent friendly units of lower level will do more damage in battle. When a uni
 			table.insert(abilities, { "dummy", {
 				id = "battletutor",
 				name = "battle tutor",
-				description = "Battle Tutor:\
-This unit's ability to teach battle skills gives each adjacent allied unit a +1 to experience earned in battle."
+				description = "This unit's ability to teach battle skills gives each adjacent allied unit a +1 to experience earned in battle."
 			} })
 		end
 		if (get_p(unit, "npc_init.abilities.skeletal") or 0) == 1 then
@@ -1336,14 +1313,7 @@ This unit's ability to teach battle skills gives each adjacent allied unit a +1 
 				id = "submerge",
 				name = "submerge",
 				female_name = "female^submerge",
-				description = "Submerge:\
-This unit can hide in deep water, and remain undetected by its enemies.\
-\
-Enemy units cannot see this unit while it is in deep water, except if they have units next to it. Any enemy unit that first discovers this unit immediately loses all its remaining movement.",
-			        name_inactive = "submerge",
-			        female_name_inactive = "female^submerge",
-			        description_inactive = "Submerge:\
-This unit can hide in deep water, and remain undetected by its enemies.\
+				description = "This unit can hide in deep water, and remain undetected by its enemies.\
 \
 Enemy units cannot see this unit while it is in deep water, except if they have units next to it. Any enemy unit that first discovers this unit immediately loses all its remaining movement.",
 					affect_self = "yes",
@@ -1361,8 +1331,7 @@ Enemy units cannot see this unit while it is in deep water, except if they have 
 			name = "loner",
 			affect_self = "yes",
 			cumulative = "no",
-			description = "Loner\
-This unit is 25% more effective in combat when not adjacent to any allied units.",
+			description = "This unit is 25% more effective in combat when not adjacent to any allied units.",
 			value = 25,
 			{ "filter", {
 				{ "not", {
@@ -1380,7 +1349,7 @@ This unit is 25% more effective in combat when not adjacent to any allied units.
 			id = "skirmisher",
 			name = "skirmisher",
 			affect_self = "yes",
-			description = "Skirmisher: This unit is skilled in moving past enemies quickly, and ignores all enemy Zones of Control."
+			description = "This unit is skilled in moving past enemies quickly, and ignores all enemy Zones of Control."
 		} })
 		if (get_p(unit, "variables.abilities.distract") or 0) > 0 then
 			table.insert(abilities, { "skirmisher", {
@@ -1388,8 +1357,7 @@ This unit is 25% more effective in combat when not adjacent to any allied units.
 				name = "distract",
 				affect_self = "no",
 				affect_allies = "yes",
-				description = "Distract:\
-This unit negates enemy Zones of Control around itself for allied units (but not for itself).",
+				description = "This unit negates enemy Zones of Control around itself for allied units (but not for itself).",
 				{ "affect_adjacent", {
 					adjacent = "n,ne,se,s,sw,nw"
 				} }
@@ -1415,10 +1383,7 @@ This unit negates enemy Zones of Control around itself for allied units (but not
 					name = "ambush",
 					name_inactive = "ambush",
 					affect_self = "yes",
-					description = "Ambush:\
-This unit can hide in forest if wearing only light armor.",
-					description_inactive = "Ambush:\
-This unit can hide in forest if wearing only light armor.",
+					description = "This unit can hide in forest if wearing only light armor.",
 					{ "filter_self", {
 						{ "filter_location", {
 							terrain = "*^F*"
@@ -1432,10 +1397,7 @@ This unit can hide in forest if wearing only light armor.",
 					name = "ambush",
 					name_inactive = "ambush",
 					affect_self = "yes",
-					description = "Ambush:\
-This unit can hide in mountains if wearing only light armor.",
-					description_inactive = "Ambush:\
-This unit can hide in mountains if wearing only light armor.",
+					description = "This unit can hide in mountains if wearing only light armor.",
 					{ "filter_self", {
 						{ "filter_location", {
 							terrain = "M*,M*^*"
@@ -1449,8 +1411,7 @@ This unit can hide in mountains if wearing only light armor.",
 					name = "sneak",
 					name_inactive = "sneak",
 					affect_self = "yes",
-					description = "Sneak: This unit can hide from enemies if it has used no more than half of its movement points and light armor.",
-					description_inactive = "Sneak: This unit can hide from enemies if it has used no more than half of its movement points and light armor.",
+					description = "This unit can hide from enemies if it has used no more than half of its movement points and light armor.",
 					{ "filter", {
 						{ "filter_wml", {
 							{ "variables", { stealthiness = 1 } }
@@ -1466,15 +1427,8 @@ This unit can hide in mountains if wearing only light armor.",
 				id = "nightstalk",
 				name = "nightstalk",
 				female_name = "nightstalk",
-				name_inactive = "nightstalk",
-				female_name_inactive = "nightstalk",
 				affect_self = "yes",
-				description = "Nightstalk:\
-The unit becomes invisible during night.\
-\
-Enemy units cannot see this unit at night, except if they have units next to it. Any enemy unit that first discovers this unit immediately loses all its remaining movement.",
-				description_inactive = "Nightstalk:\
-The unit becomes invisible during night.\
+				description = "The unit becomes invisible during night.\
 \
 Enemy units cannot see this unit at night, except if they have units next to it. Any enemy unit that first discovers this unit immediately loses all its remaining movement.",
 				{ "filter_self", {
@@ -1493,12 +1447,10 @@ Enemy units cannot see this unit at night, except if they have units next to it.
 			value = skill_level
 		}
 		if skill_level > 7 then
-			new_ability.description = string.format("Regenerates:\
-The unit will heal itself %d HP per turn. If it is poisoned, it will remove the poison instead of healing.", skill_level)
+			new_ability.description = string.format("The unit will heal itself %d HP per turn. If it is poisoned, it will remove the poison instead of healing.", skill_level)
 			new_ability.poison = "cured"
 		else
-			new_ability.description = string.format("Regenerates:\
-The unit will heal itself %d HP per turn. If it is poisoned, it will slow the poison until cured.", skill_level)
+			new_ability.description = string.format("The unit will heal itself %d HP per turn. If it is poisoned, it will slow the poison until cured.", skill_level)
 			new_ability.poison = "slowed"
 		end
 		table.insert(abilities, { "regenerate", new_ability })
@@ -1508,8 +1460,7 @@ The unit will heal itself %d HP per turn. If it is poisoned, it will slow the po
 			id = "survivalist",
 			name = "survivalist",
 			value = 8,
-			description = "Survivalist:\
-The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it will remove the poison instead of healing.",
+			description = "The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it will remove the poison instead of healing.",
 			poison = "cured",
 			{ "filter_self", {
 				{ "filter_location", {
@@ -1537,15 +1488,13 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(abilities, { "heals", {
 						id = "rpg_heals",
 						name = "heals",
-						description = string.format("Heals +%d:\
-	<small>This can heal %d hit points.</small>", heal_power, heal_power)
+						description = string.format("<small>This can heal %d hit points.</small>", heal_power, heal_power)
 					} })
 					if heal_power > 7 then
 						table.insert(abilities, { "heals", {
 							id = "rpg_cures",
 							name = "cures",
-							description = string.format("Heals +%d:\
-		<small>This can heal %d hit points.</small>", heal_power, heal_power)
+							description = string.format("<small>This can heal %d hit points.</small>", heal_power, heal_power)
 						} })
 						set_p(unit, string.format("variables.inventory.spells[%d].description", i - 1), string.format("Heals +%d:\
 	<small>Heal %d hitpoints. Cure if the unit is poisoned.</small>", heal_power, heal_power))
@@ -1556,8 +1505,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(abilities, { "heals", {
 						id = "rpg_teleport",
 						name = "teleport",
-						description = string.format("Teleport:\
-	This unit may teleport %d hexes away granted it is an empty location that the unit can move to normally.", 2 * spell_power)
+						description = string.format("This unit may teleport %d hexes away granted it is an empty location that the unit can move to normally.", 2 * spell_power)
 					} })
 					set_p(unit, string.format("variables.inventory.spells[%d].description", i - 1), string.format("Teleport:\
 	<small>Teleport %d hexes away.</small>", 2 * spell_power))
@@ -1691,7 +1639,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(specials, { "berserk", {
 						id = "berserk",
 						name = "berserk",
-						description = "Berserk:\nOn offense, combat length with this weapon triples. On defense, combat length with this weapon doubles.",
+						description = "On offense, combat length with this weapon triples. On defense, combat length with this weapon doubles.",
 						value = 3,
 						active_on = "offense"
 					} })
@@ -1706,7 +1654,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(specials, { "berserk", {
 						id = "rage",
 						name = "rage",
-						description = "Rage:\nOn offense, combat length with this weapon doubles.",
+						description = "On offense, combat length with this weapon doubles.",
 						value = 2,
 						active_on = "offense"
 					} })
@@ -1724,13 +1672,13 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					name = "slash+dash"
 				}
 				if not player then
-					new_special.description = "Slash+Dash:\nWhen used offensively, every two hits with this weapon grants 1 movement point."
+					new_special.description = "When used offensively, every two hits with this weapon grants 1 movement point."
 				elseif special_level == 1 then
-					new_special.description = "Slash+Dash Level 1:\nWhen used offensively, every two hits with this weapon grants 1 movement point."
+					new_special.description = "When used offensively, every two hits with this weapon grants 1 movement point."
 				elseif special_level == 2 then
-					new_special.description = "Slash+Dash Level 2:\nWhen used offensively, every hit with this weapon grants 1 movement point."
+					new_special.description = "When used offensively, every hit with this weapon grants 1 movement point."
 				else
-					new_special.description = "Slash+Dash Level 3:\nWhen used offensively, every hit with this weapon grants 2 movement points."
+					new_special.description = "When used offensively, every hit with this weapon grants 2 movement points."
 				end
 				table.insert(specials, { "dummy", new_special })
 			end
@@ -1755,10 +1703,10 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				}
 				if player then
 					new_special.value = marksman_offset + 5 * special_level
-					new_special.description = string.format("Marksman Level %d:\nWhen used offensively, this attack always has at least a %d%% chance to hit.", special_level, new_special.value)
+					new_special.description = string.format("When used offensively, this attack always has at least a %d%% chance to hit.", special_level, new_special.value)
 				else
 					new_special.value = 60
-					new_special.description = "Marksman:\nWhen used offensively, this attack always has at least a 60% chance to hit."
+					new_special.description = "When used offensively, this attack always has at least a 60% chance to hit."
 				end
 				table.insert(specials, { "chance_to_hit", new_special })
 			end
@@ -1770,22 +1718,17 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 						cumulative = "yes",
 						active_on = "offense",
 						value = 50,
-						description = "Accuracy:\
-	When used offensively, this attack always has at least a 50% chance to hit."
+						description = "When used offensively, this attack always has at least a 50% chance to hit."
 					} })
 				end
 				if weapon_class == "polearm" and (get_p(unit, "variables.abilities.evasion_polearm") or 0) > 0 then
 					table.insert(specials, { "damage", {
 						id = "evasion",
 						name = "evasion",
-						name_inactive = "evasion",
 						active_on = "offense",
 						apply_to = "opponent",
 						multiply = 0.66,
-						description = "Evasion:\
-	When this attack is used offensively, this unit takes one third less damage in retaliation.",
-						description_inactive = "Evasion:\
-	When this attack is used offensively, this unit takes one third less damage in retaliation."
+						description = "When this attack is used offensively, this unit takes one third less damage in retaliation.",
 					} })
 				end
 			end
@@ -1800,7 +1743,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(specials, { "damage", {
 						id = "goliath_bane",
 						name = "goliath bane",
-						description = string.format("Goliath Bane Level %d:\n%d%% damage bonus for each level of the enemy. Offense only.", parsed.skills.goliath_bane, 10 * parsed.skills.goliath_bane),
+						description = string.format("%d%% damage bonus for each level of the enemy. Offense only.", parsed.skills.goliath_bane, 10 * parsed.skills.goliath_bane),
 						multiply = 1 + 0.1 * parsed.skills.goliath_bane,
 						active_on = "offense",
 						{ "filter_opponent", {
@@ -1816,7 +1759,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(specials, { "damage", {
 						id = "goliath_bane",
 						name = "goliath bane",
-						description = "Goliath Bane:\n20% damage bonus for each level of the enemy. Offense only.",
+						description = "20% damage bonus for each level of the enemy. Offense only.",
 						multiply = 1.2,
 						active_on = "offense",
 						{ "filter_opponent", {
@@ -1846,11 +1789,9 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					active_on = "offense"
 				}
 				if player then
-					new_special.description = string.format("Ensnare:\
-	Each successful strike with this spell increases the chance to hit by %d%%. Active on offense.", 5 * special_level)
+					new_special.description = string.format("Each successful strike with this spell increases the chance to hit by %d%%. Active on offense.", 5 * special_level)
 				else
-					new_special.description = "Ensnare:\
-	Each successful strike with this spell increases the chance to hit by 10%. Active on offense."
+					new_special.description = "Each successful strike with this spell increases the chance to hit by 10%. Active on offense."
 				end
 				table.insert(specials, { "chance_to_hit", new_special })
 				attack.ensnare = 1
@@ -1864,8 +1805,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "chance_to_hit", {
 					id = "pointpike",
 					name = "point+pike",
-					description = string.format("Point+Pike Level %d:\
-	Each miss with this weapon increases the chance to hit by %d%%, which is reset upon a successful hit. Active on offense.", special_level, 10 * special_level),
+					description = string.format("Each miss with this weapon increases the chance to hit by %d%%, which is reset upon a successful hit. Active on offense.", special_level, 10 * special_level),
 					add = 0,
 					cumulative = "yes",
 					active_on = "offense"
@@ -1903,11 +1843,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					table.insert(specials, { "damage", {
 						id = "brutal_damage",
 						name = "brutal assault",
-						description = "Brutal Assault:\
-	When attacking, deal 60% more damage per strike, but get half as many strikes.",
-						name_inactive = "brutal assault",
-						description_inactive = "Brutal Assault:\
-	When attacking, deal 60% more damage per strike, but get half as many strikes.",
+						description = "When attacking, deal 60% more damage per strike, but get half as many strikes.",
 						value = math.floor(attack.damage * 1.6 + 0.5),
 						cumulative = "no",
 						active_on = "offense",
@@ -1935,14 +1871,11 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					} }
 				}
 				if special_level == 1 then
-					new_special.description = "Storm Level 1:\
-	Enemy strikes will stop 2 strikes after this weapon's last strike."
+					new_special.description = "Enemy strikes will stop 2 strikes after this weapon's last strike."
 				elseif special_level == 2 then
-					new_special.description = "Storm Level 2:\
-	Enemy strikes will stop 1 strike after this weapon's last strike."
+					new_special.description = "Enemy strikes will stop 1 strike after this weapon's last strike."
 				else
-					new_special.description = "Storm Level 3:\
-	Enemy strikes will stop after this weapon's last strike."
+					new_special.description = "Enemy strikes will stop after this weapon's last strike."
 				end
 				new_special.description_inactive = new_special.description
 				table.insert(specials, { "attacks", new_special })
@@ -1971,9 +1904,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "slow", {
 					id = "slow",
 					name = "slows",
-					description = "Slow:\nThis attack slows the target until it ends a turn. Slow halves the damage caused by attacks and the movement cost for a slowed unit is doubled. A unit that is slowed will feature a snail icon in its sidebar information when it is selected.",
-					name_inactive = "slows",
-					description_inactive = "Slow:\nThis attack slows the target until it ends a turn. Slow halves the damage caused by attacks and the movement cost for a slowed unit is doubled. A unit that is slowed will feature a snail icon in its sidebar information when it is selected.",
+					description = "This attack slows the target until it ends a turn. Slow halves the damage caused by attacks and the movement cost for a slowed unit is doubled. A unit that is slowed will feature a snail icon in its sidebar information when it is selected.",
 					{ "filter_opponent", {
 						{ "not", {
 							{ "filter_wml", {
@@ -1989,11 +1920,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "poison", {
 					id = "poison",
 					name = "poison",
-					name_inactive = "poison",
-					description = "Poison:\
-	This attack poisons living targets. Poisoned units lose 8 HP every turn until they are cured or are reduced to 1 HP. Poison can not, of itself, kill a unit.",
-					description_inactive = "Poison:\
-	This attack poisons living targets. Poisoned units lose 8 HP every turn until they are cured or are reduced to 1 HP. Poison can not, of itself, kill a unit.",
+					description = "This attack poisons living targets. Poisoned units lose 8 HP every turn until they are cured or are reduced to 1 HP. Poison can not, of itself, kill a unit.",
 					icon = "attacks/dagger-thrown-poison-human.png",
 					{ "filter_opponent", {
 						{ "not", {
@@ -2014,8 +1941,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 			if special_level > 0 then
 				new_special = {
 					name = "drains",
-					description = "Drain:\
-	This unit drains health from living units, healing itself for half the amount of damage it deals (rounded down)."
+					description = "This unit drains health from living units, healing itself for half the amount of damage it deals (rounded down)."
 				}
 				if special_level == 2 then
 					new_special.id = "metal_to_drain"
@@ -2028,11 +1954,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "damage", {
 					id = "dread",
 					name = "dread",
-					name_inactive = "dread",
-					description = "Dread:\
-	When this attack is used offensively, this unit takes one third less damage in retaliation.",
-					description_inactive = "Dread:\
-	When this attack is used offensively, this unit takes one third less damage in retaliation.",
+					description = "When this attack is used offensively, this unit takes one third less damage in retaliation.",
 					active_on = "offense",
 					apply_to = "opponent",
 					multiply = 0.66
@@ -2042,16 +1964,14 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "firststrike", {
 					id = "firststrike",
 					name = "readied bolt",
-					description = "Readied Bolt:\
-	This attack always strikes first, even when defending."
+					description = "This attack always strikes first, even when defending."
 				} })
 			end
 			if (not skirmisher_flag) and (get_p(weapon, "special_type.firststrike") or 0) > 0 and (get_p(unit, "variables.abilities.firststrike") or 0) > 0 then
 				table.insert(specials, { "firststrike", {
 					id = "firststrike",
 					name = "firststrike",
-					description = "First Strike:\
-	This unit always strikes first with this attack, even if they are defending."
+					description = "This unit always strikes first with this attack, even if they are defending."
 				} })
 				set_p(unit, "variables.firststrike_flag", 1)
 			end
@@ -2068,12 +1988,10 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					active_on = "offense"
 				}
 				if player then
-					new_special.description = string.format("Backstab Level %d:\
-	This attack deals %d%% damage if there is an enemy of the target on the opposite side of the target, and that unit is not incapacitated (e.g. turned to stone). Active on offense.", special_level, 150 + special_level * 50)
+					new_special.description = string.format("This attack deals %d%% damage if there is an enemy of the target on the opposite side of the target, and that unit is not incapacitated (e.g. turned to stone). Active on offense.", special_level, 150 + special_level * 50)
 					new_special.multiply = 1.5 + special_level * 0.5
 				else
-					new_special.description = "Backstab:\
-	This attack deals double damage if there is an enemy of the target on the opposite side of the target, and that unit is not incapacitated (e.g. turned to stone). Active on offense."
+					new_special.description = "This attack deals double damage if there is an enemy of the target on the opposite side of the target, and that unit is not incapacitated (e.g. turned to stone). Active on offense."
 					new_special.multiply = 2
 				end
 				table.insert(specials, { "damage", new_special })
@@ -2089,11 +2007,9 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					name = "target"
 				}
 				if player then
-					new_special.description = string.format("Target Level %d:\
-	This attack deals %d%% damage but strikes are reduced by half. Always active.", special_level, 150 + special_level * 50)
+					new_special.description = string.format("This attack deals %d%% damage but strikes are reduced by half. Always active.", special_level, 150 + special_level * 50)
 				else
-					new_special.description = "Target:\
-	This attack deals double damage but strikes are reduced by half. Always active."
+					new_special.description = "This attack deals double damage but strikes are reduced by half. Always active."
 				end
 				table.insert(specials, { "dummy", new_special })
 			end
@@ -2109,11 +2025,9 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					name = "cleave"
 				}
 				if player then
-					new_special.description = string.format("Cleave Level %d:\
-	Enemy units adjacent to both units in attack with this weapon can take 1/%dth of this weapon's damage. Terrain defense and resistances apply, chance to hit reduced to %d/%d normal. Active on offense.", special_level, 10 - 2 * special_level, special_level, special_level + 1)
+					new_special.description = string.format("Enemy units adjacent to both units in attack with this weapon can take 1/%dth of this weapon's damage. Terrain defense and resistances apply, chance to hit reduced to %d/%d normal. Active on offense.", special_level, 10 - 2 * special_level, special_level, special_level + 1)
 				else
-					new_special.description = "Cleave:\
-	Enemy units adjacent to both units in attack with this weapon can take 1/8th of this weapon's damage. Terrain defense and resistances apply, chance to hit reduced to 1/2 normal. Active on offense."
+					new_special.description = "Enemy units adjacent to both units in attack with this weapon can take 1/8th of this weapon's damage. Terrain defense and resistances apply, chance to hit reduced to 1/2 normal. Active on offense."
 				end
 				table.insert(specials, { "dummy", new_special })
 			end
@@ -2127,7 +2041,6 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				new_special = {
 					id = "riposte",
 					name = "riposte",
-					name_inactive = "riposte",
 					cumulative = "yes",
 					active_on = "defense",
 					{ "filter_self", {
@@ -2141,16 +2054,13 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				if player then
 					new_special.value = 40 + 20 * special_level
 					if special_level == 3 then
-						new_special.description = "Riposte Level 3:\
-	If an enemy misses versus this attack, the returning attack will automatically hit. Active on defense."
+						new_special.description = "If an enemy misses versus this attack, the returning attack will automatically hit. Active on defense."
 					else
-						new_special.description = string.format("Riposte Level %d:\
-	If an enemy misses versus this attack, the returning attack will have at least a %d%% chance to hit. Active on defense.", special_level, new_special.value)
+						new_special.description = string.format("If an enemy misses versus this attack, the returning attack will have at least a %d%% chance to hit. Active on defense.", special_level, new_special.value)
 					end
 				else
 					new_special.value = 80
-					new_special.description = "Riposte:\
-	If an enemy misses versus this attack, the returning attack will have at least a 80% chance to hit. Active on defense."
+					new_special.description = "If an enemy misses versus this attack, the returning attack will have at least a 80% chance to hit. Active on defense."
 				end
 				new_special.description_inactive = new_special.description
 				table.insert(specials, { "chance_to_hit", new_special })
@@ -2167,17 +2077,13 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					name = "remaining_ammo"
 				}
 				if not player then
-					new_special.description = "Remaining Ammo:\
-	If any ammo remains after killing a unit with this attack, then it may be used in another attack."
+					new_special.description = "If any ammo remains after killing a unit with this attack, then it may be used in another attack."
 				elseif special_level == 1 then
-					new_special.description = "Remaining Ammo Level 1:\
-	If any ammo remains after killing a unit with this attack, then it may be used in another attack, minus one strike."
+					new_special.description = "If any ammo remains after killing a unit with this attack, then it may be used in another attack, minus one strike."
 				elseif special_level == 2 then
-					new_special.description = "Remaining Ammo Level 2:\
-	If any ammo remains after killing a unit with this attack, then it may be used in another attack."
+					new_special.description = "If any ammo remains after killing a unit with this attack, then it may be used in another attack."
 				else
-					new_special.description = "Remaining Ammo Level 3:\
-	If any ammo remains after killing a unit with this attack, then it may be used in another attack, plus one strike."
+					new_special.description = "If any ammo remains after killing a unit with this attack, then it may be used in another attack, plus one strike."
 				end
 				table.insert(specials, { "dummy", new_special })
 			end
@@ -2185,8 +2091,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "plague", {
 					id = "plague",
 					name = "plague",
-					description = "Plague:\
-	When a unit is killed by a Plague attack, that unit is replaced with a Walking Corpse on the same side as the unit with the Plague attack. This doesn't work on Undead.",
+					description = "When a unit is killed by a Plague attack, that unit is replaced with a Walking Corpse on the same side as the unit with the Plague attack. This doesn't work on Undead.",
 					type = "Walking Corpse_MODRPG"
 				} })
 			end
@@ -2194,8 +2099,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "plague", {
 					id = "soultrap",
 					name = "soul trap",
-					description = "Soul Trap:\
-	When a unit is killed with a dagger embued with the power of Soul Trap, its spirit doesn't ascend to the next world but instead is trapped to serve its new master.",
+					description = "When a unit is killed with a dagger embued with the power of Soul Trap, its spirit doesn't ascend to the next world but instead is trapped to serve its new master.",
 					type = "Trapped Spirit"
 				} })
 			end
@@ -2214,19 +2118,15 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 					name = "bloodlust",
 				}
 				if not player then
-					new_special.description = "Bloodlust:\
-	If this attack kills the target within two strikes, this unit can attack again.\
+					new_special.description = "If this attack kills the target within two strikes, this unit can attack again.\
 	If this attack kills the target on the first strike, this unit also recovers one movement point."
 				elseif special_level == 1 then
-					new_special.description = "Bloodlust Level 1:\
-	If this attack kills the target on the first strike, this unit can attack again."
+					new_special.description = "If this attack kills the target on the first strike, this unit can attack again."
 				elseif special_level == 2 then
-					new_special.description = "Bloodlust Level 2:\
-	If this attack kills the target within two strikes, this unit can attack again.\
+					new_special.description = "If this attack kills the target within two strikes, this unit can attack again.\
 	If this attack kills the target on the first strike, this unit also recovers one movement point."
 				else
-					new_special.description = "Bloodlust Level 3:\
-	If this attack kills the target within three strikes, this unit can attack again.\
+					new_special.description = "If this attack kills the target within three strikes, this unit can attack again.\
 	If this attack kills the target within two strikes, this unit also recovers one movement point."
 				end
 				table.insert(specials, { "dummy", new_special })
@@ -2236,8 +2136,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "dummy", {
 					id = "grace",
 					name = "deadly grace",
-					description = "Deadly Grace:\
-	If this unit avoids all defending strikes while using this attack, it can attack again.\
+					description = "If this unit avoids all defending strikes while using this attack, it can attack again.\
 	\
 	NOTE: The defending unit must have the chance to strike at least one time for special to trigger."
 				} })
@@ -2246,8 +2145,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "chance_to_hit", {
 					id = "magical",
 					name = "magical",
-					description = "Magical:\
-	This attack always has a 70% chance to hit regardless of the defensive ability of the unit being attacked.",
+					description = "This attack always has a 70% chance to hit regardless of the defensive ability of the unit being attacked.",
 					value = 70,
 					cumulative = "no"
 				} })
@@ -2256,8 +2154,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "chance_to_hit", {
 					id = "precision",
 					name = "precision",
-					description = "Precision:\
-	This attack always has a 80% chance to hit",
+					description = "This attack always has a 80% chance to hit",
 					value = 80,
 					cumulative = "no"
 				} })
@@ -2266,8 +2163,7 @@ The unit will heal itself 8 HP per turn if in a forest. If it is poisoned, it wi
 				table.insert(specials, { "swarm", {
 					id = "swarm",
 					name = "swarm",
-					description = "Swarm:\
-The number of strikes of this attack decreases when the unit is wounded. The number of strikes is proportional to the percentage of its of maximum HP the unit has. For example a unit with 3/4 of its maximum HP will get 3/4 of the number of strikes."
+					description = "The number of strikes of this attack decreases when the unit is wounded. The number of strikes is proportional to the percentage of its of maximum HP the unit has. For example a unit with 3/4 of its maximum HP will get 3/4 of the number of strikes."
 				} })
 			end
 
@@ -2337,9 +2233,7 @@ The number of strikes of this attack decreases when the unit is wounded. The num
 				{ "slow", {
 					id = "slow",
 					name = "slows",
-					description = "Slow:\nThis attack slows the target until it ends a turn. Slow halves the damage caused by attacks and the movement cost for a slowed unit is doubled. A unit that is slowed will feature a snail icon in its sidebar information when it is selected.",
-					name_inactive = "slows",
-					description_inactive = "Slow:\nThis attack slows the target until it ends a turn. Slow halves the damage caused by attacks and the movement cost for a slowed unit is doubled. A unit that is slowed will feature a snail icon in its sidebar information when it is selected.",
+					description = "This attack slows the target until it ends a turn. Slow halves the damage caused by attacks and the movement cost for a slowed unit is doubled. A unit that is slowed will feature a snail icon in its sidebar information when it is selected.",
 					{ "filter_opponent", {
 						{ "not", {
 							{ "filter_wml", {
